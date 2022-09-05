@@ -1,0 +1,16 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: cadvisor
+  namespace: monitoring
+  labels:
+    name: cadvisor
+spec:
+  namespaceSelector:
+    matchNames:
+      - monitoring
+  selector:
+    matchLabels:
+      name: cadvisor
+  podMetricsEndpoints:
+  - targetPort: 8080
