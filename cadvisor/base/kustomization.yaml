@@ -9,4 +9,5 @@ resources:
 - daemonset.yaml
 - podsecuritypolicy.yaml
 - serviceaccount.yaml
-- podmonitor.yaml
+- servicemonitor.yaml
+- service.yaml

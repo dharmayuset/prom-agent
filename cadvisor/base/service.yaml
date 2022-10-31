@@ -7,12 +7,10 @@ metadata:
   name: cadvisor
   namespace: monitoring
 spec:
-  clusterIP: None
   ports:
   - name: http
     port: 8080
     targetPort: http
     protocol: TCP
   selector:
-    app.kubernetes.io/component: cadvisor
-    app.kubernetes.io/name: cadvisor
+    name: cadvisor
